@@ -14,6 +14,9 @@ set_include_path(implode(PATH_SEPARATOR, array(
     get_include_path(),
 )));
 
+ini_set("soap.wsdl_cache_enabled", 0); //** Limpa o cache
+
+
 /** Zend_Application */
 require_once 'Zend/Application.php';
 

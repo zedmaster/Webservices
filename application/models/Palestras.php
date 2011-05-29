@@ -15,8 +15,7 @@ class Application_Model_Palestras
 				"Migrando Legado com Zend Framework e Dojo Toolkit",
 				"PHP Security",
 				"SCRUM",
-				"Wordpress - Desenvolvimento de Redes Sociais e Sites para",
-				"Grandes Audiências",
+				"Wordpress - Desenvolvimento de Redes Sociais e Sites para Grandes Audiências",
 				"Zend Framework - Estrutura e TDD",
 				"GIT",
 				"CodeIgniter",
@@ -28,7 +27,8 @@ class Application_Model_Palestras
 	}
 
 	/**
-	 *
+	 * Exibe todas as palestras.
+     *
 	 * @return array
 	 */
 	public function listarTodas()
@@ -36,5 +36,25 @@ class Application_Model_Palestras
 		return $this->_palestras;
 	}
 
+
+    /**
+     * Pesquisa por nome.
+     *
+     * @param string $chave
+     * @return array
+     **/
+    public function pesquisar($chave)
+    {
+
+        $chaves = array_search($chave,$this->_palestras);
+
+        if(!$chaves){
+            return false;
+        }
+
+        $result = array($this->_palestras[$chaves]);
+
+        return $result;
+    }
 }
 

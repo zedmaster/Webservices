@@ -14,9 +14,12 @@
         <controllerFile controllerName="Error"/>
         <controllerFile controllerName="Soap">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="client"/>
         </controllerFile>
       </controllersDirectory>
-      <formsDirectory enabled="false"/>
+      <formsDirectory>
+        <formFile formName="Pesquisar"/>
+      </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <modelFile modelName="Palestras"/>
@@ -32,6 +35,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Soap">
             <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Soap">
+            <viewScriptFile forActionName="client"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

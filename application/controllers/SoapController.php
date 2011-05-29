@@ -2,10 +2,12 @@
 
 class SoapController extends Zend_Controller_Action
 {
+    public $wsdl;
 
     public function init()
     {
-        /* Initialize action controller here */
+        //** Monta o link do WSDL
+        $this->wsdl = "http://".$_SERVER["HTTP_HOST"]."/soap/server?wsdl";
     }
 
     public function indexAction()
@@ -13,10 +15,9 @@ class SoapController extends Zend_Controller_Action
         // action body
     }
 
-	public function serverAction()
-	{
+    public function serverAction()
+    {
 		$this->getHelper('viewRenderer')->setNoRender();
-
 
 		if(isset($_GET['wsdl'])) {
 			//** Cria o arquivo WSDL automaticamente
@@ -27,7 +28,7 @@ class SoapController extends Zend_Controller_Action
 		}
 
 
-		$server = new Zend_Soap_Server();
+		$server = new Zend_Soap_Server($this->wsdl);
 
 		// Vincula a  classe no Soap Server
 		$server->setClass('Application_Model_Palestras');
@@ -36,6 +37,32 @@ class SoapController extends Zend_Controller_Action
 		$server->setObject(new Application_Model_Palestras());
 
 		$server->handle();
-	}
+    }
+
+    public function clientAction()
+    {
+        $lista = array();
+        $pesquisa = array();
+        $form = new Application_Form_Pesquisar();
+
+        $client = new Zend_Soap_Client($this->wsdl);
+        $lista = $client->listarTodas();
+        $pesquisa = $client->pesquisar($_POST['chave']);
+
+        if($this->getRequest()->isPost() && !$pesquisa)
+        {
+            $pesquisa = array("Curso não encontrado.");
+        }
+
+
+        $this->view->lista = $lista;
+        $this->view->pesquisa = $pesquisa;
+        $form->populate($_POST);
+        $this->view->form = $form;
+    }
+
+
 }
+
+
 
