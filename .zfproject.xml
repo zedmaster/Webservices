@@ -16,6 +16,10 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="client"/>
         </controllerFile>
+        <controllerFile controllerName="Xmlrpc">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="client"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Pesquisar"/>
@@ -37,6 +41,12 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Soap">
+            <viewScriptFile forActionName="client"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Xmlrpc">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Xmlrpc">
             <viewScriptFile forActionName="client"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
@@ -74,6 +84,7 @@
         <testApplicationBootstrapFile filesystemName="bootstrap.php"/>
         <testApplicationControllerDirectory>
           <testApplicationControllerFile filesystemName="SoapControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="XmlrpcControllerTest.php"/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>

@@ -1,0 +1,16 @@
+<h1>XML-RPC - CLIENT</h1>
+
+<h2>Palestras - listarTodas()</h2>
+
+<?=$this->htmlList($this->lista)?>
+
+
+<h2>Palestras - pesquisar()</h2>
+
+<?=$this->form?>
+
+
+<?if(!is_null($this->pesquisa)){?>
+    <?=$this->htmlList($this->pesquisa)?>
+<?}?>
+
