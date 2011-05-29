@@ -18,6 +18,7 @@ class SoapController extends Zend_Controller_Action
     public function serverAction()
     {
 		$this->getHelper('viewRenderer')->setNoRender();
+        $this->_helper->layout->disableLayout();
 
 		if(isset($_GET['wsdl'])) {
 			//** Cria o arquivo WSDL automaticamente

@@ -14,6 +14,7 @@ class XmlrpcController extends Zend_Controller_Action
     public function serverAction()
     {
 		$this->getHelper('viewRenderer')->setNoRender();
+        $this->_helper->layout->disableLayout();
 
         $server = new Zend_XmlRpc_Server();
         $server->setClass('Application_Model_Palestras', 'palestra'); 

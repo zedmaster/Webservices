@@ -24,6 +24,10 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="client"/>
         </controllerFile>
+        <controllerFile controllerName="Json">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="client"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Pesquisar"/>
@@ -57,6 +61,12 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Rest">
+            <viewScriptFile forActionName="client"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Json">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Json">
             <viewScriptFile forActionName="client"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
@@ -96,6 +106,7 @@
           <testApplicationControllerFile filesystemName="SoapControllerTest.php"/>
           <testApplicationControllerFile filesystemName="XmlrpcControllerTest.php"/>
           <testApplicationControllerFile filesystemName="RestControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="JsonControllerTest.php"/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>

@@ -14,6 +14,7 @@ class RestController extends Zend_Controller_Action
     public function serverAction()
     {
 		$this->getHelper('viewRenderer')->setNoRender();
+        $this->_helper->layout->disableLayout();
 
         $server = new Zend_Rest_Server();
         $server->setClass('Application_Model_Palestras');
