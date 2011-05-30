@@ -10,8 +10,12 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
-    }
+		// Código para responder ao OpenID
+		if($this->_getParam('openid_mode')){
+			$this->_forward('handle','provider','default');
+		}
+
+	}
 
 
 }
