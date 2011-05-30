@@ -1,0 +1,9 @@
+<h2>RSS</h2>
+
+<?foreach($this->feed as $val){?>
+    <ul>
+        <dd><strong><?=$val->title?></strong></dd>
+        <li><?=$val->link?></li>
+        <li><?=$val->description?></li>
+    </ul>
+<?}?>

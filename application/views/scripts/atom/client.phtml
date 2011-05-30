@@ -1,0 +1,9 @@
+<h2>ATOM</h2>
+
+<?foreach($this->feed as $val){?>
+    <ul>
+        <dd><strong><?=$val->title?></strong></dd>
+        <li><?=$val->link['href']?></li>
+        <li><?=$val->summary?></li>
+    </ul>
+<?}?>
