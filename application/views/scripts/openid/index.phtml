@@ -1,0 +1,117 @@
+<h2>OpenID</h2>
+
+<ul>
+<li><a href="/provider">Provider</a></li>
+<li><a href="/consumer">Consumer</a></li>
+</ul>
+
+<h3>Descrição</h3>
+
+<p>
+OpenID é um sistema de identificação desenvolvido por Brad Fitzpatrick do
+LiveJournal. Trata-se de uma rede distribuída na qual a identidade do utilizador
+é dada por uma URL ou XRI que pode ser verificada por qualquer servidor
+executando o protocolo.
+</p>
+
+<p>
+Em sites que suportam OpenID, utilizadores não necessitam de criar uma nova
+conta antes de poder a aceder. Só é necessário autenticação por um site que
+suporta OpenID, chamado provedor de identidade. Esse provedor pode então
+confirmar o dono da OpenID para outro site que suporta OpenID.
+</p>
+
+<p>
+Independente das arquitecturas single sign-on, o OpenID não define um mecanismo
+de autenticação. Assim a força de um login por OpenID depende de quanto o site
+sabe sobre as políticas de autenticação do provedor de identidade. Sem tal
+confiança, o OpenID não é recomendado para ser usado com contas sensíveis, como
+de comércio eletrônico e bancos. 
+</p>
+
+<img src="/img/openid.jpg">
+
+<ol type="1">
+	<li class="listitem">
+		<p class="para">
+			Authentication is initiated by the end user, who passes their OpenID identifier to the OpenID consumer through a User-Agent.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The OpenID consumer performs normalization and discovery on the user-supplied identifier. Through this process,
+			the consumer obtains the claimed identifier, the <acronym class="acronym">URL</acronym>	of	the	
+			OpenID	provider and an OpenID protocol version.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The OpenID consumer establishes	an optional association with the provider using Diffie-Hellman keys. As a result, both
+			parties have a common "shared secret" that is used for signing and verification of the subsequent messages.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The OpenID consumer redirects the User-Agent to the <acronym class="acronym">URL</acronym> of the OpenID provider
+			with an	OpenID authentication request.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The OpenID provider checks if the User-Agent is already authenticated and, if not, offers to do so.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The end user enters the required password.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The OpenID provider checks if it is allowed to pass the user identity to the given consumer, and asks the user if 
+			necessary.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The user allows or disallows passing his identity.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The OpenID Provider redirects the User-Agent back to the OpenID consumer with an "authentication approved" or
+			"failed" request.
+		</p>
+	</li>
+
+	<li class="listitem">
+		<p class="para">
+			The OpenID consumer verifies the information received from the provider by using the shared secret it got in step
+			3 or by sending	an additional direct request to the OpenID provider.
+		</p>
+	</li>
+</ol>
+
+
+
+
+
+
+
+	<ul>
+	<li><strong>Wiki:</strong> <a href="http://pt.wikipedia.org/wiki/OpenID">http://pt.wikipedia.org/wiki/OpenID</a></li>
+	<li><strong>Zend Framework:</strong> <a href="http://framework.zend.com/manual/en/zend.openid.introduction.html">http://framework.zend.com/manual/en/zend.openid.introduction.html</a></li>
+	<li><strong>Especificação:</strong> <a href="http://openid.net/developers/specs/">http://openid.net/developers/specs/</a></li>
+	<li><strong>Codigo Provider:</strong> <a href="https://github.com/zedmaster/Webservices/blob/master/application/controllers/ProviderController.php" target="_blank">github.com</a></li>
+	<li><strong>Codigo Consumer:</strong> <a href="https://github.com/zedmaster/Webservices/blob/master/application/controllers/ConsumerController.php" target="_blank">github.com</a></li>
+	</ul>
+
+
