@@ -36,6 +36,14 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="client"/>
         </controllerFile>
+        <controllerFile controllerName="Provider">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Consumer">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Consumer"/>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Pesquisar"/>
@@ -89,6 +97,15 @@
           <viewControllerScriptsDirectory forControllerName="Rss">
             <viewScriptFile forActionName="client"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Provider">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Consumer">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Consumer">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -129,6 +146,9 @@
           <testApplicationControllerFile filesystemName="JsonControllerTest.php"/>
           <testApplicationControllerFile filesystemName="RssControllerTest.php"/>
           <testApplicationControllerFile filesystemName="AtomControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="ProviderControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="ConsumerControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="ConsumerControllerTest.php"/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>
