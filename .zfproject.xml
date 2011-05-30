@@ -47,6 +47,9 @@
         <controllerFile controllerName="Openid">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Introducao">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Pesquisar"/>
@@ -112,6 +115,9 @@
           <viewControllerScriptsDirectory forControllerName="Openid">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Introducao">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -156,6 +162,7 @@
           <testApplicationControllerFile filesystemName="ConsumerControllerTest.php"/>
           <testApplicationControllerFile filesystemName="ConsumerControllerTest.php"/>
           <testApplicationControllerFile filesystemName="OpenidControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="IntroducaoControllerTest.php"/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>
