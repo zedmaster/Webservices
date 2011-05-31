@@ -6,6 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Webservices - <?php echo $this->headTitle() ?></title>
 
+    <link media="screen" href="/skins/default.css" rel="stylesheet">
+
     <script src="/js/jquery-1.6.1.min.js"></script>
     <SCRIPT LANGUAGE="javascript" SRC="/js/json2.js"></SCRIPT>
     <SCRIPT LANGUAGE="javascript" SRC="/js/jquery.zend.jsonrpc.js"></SCRIPT>
@@ -16,10 +18,17 @@
 
 </head>
 <body>
+<div id="content">
 <h1><a href="/">Webservices</a></h1>
 
 <?php
     echo $this->layout()->content;
 ?>
+</div>
+<div id="rodape">
+<strong>Desenvolvido por:</strong> <a href="http://uzed.com.br" target="_blank">Alexandre Ferreira Martins</a><br/>
+<strong>Código:</strong> <a href="https://github.com/zedmaster/Webservices/" target="_blank">https://github.com/zedmaster/Webservices/</a>
+</div>
+
 </body>
 </html>

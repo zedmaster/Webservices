@@ -1,0 +1,146 @@
+body, td, div, p
+{
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+}
+
+body
+{
+	background-color: #666699;
+	background-color: #9999CC;
+}
+
+#content
+{
+	background-color: #EEEEEE;
+	width: 778px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content h1
+{
+	background-color: #666699;
+	color: white;
+	padding: 5px;
+}
+
+#content h1 a:visited
+{
+    color: white;
+}
+
+#content h2
+{
+	background-color: #666699;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+#content h3
+{
+	background-color: #D3D3D3;
+	color: black;
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+#content p
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+
+#nav-menu 
+{
+    background-color: #666699;
+    display: table;
+    width: 100%;
+}
+
+ul
+{
+    padding-bottom: 15px;
+} 
+
+li
+{
+    font-size: 120%;
+} 
+
+#nav-menu li a
+{
+    background: url(background.gif) #666699 bottom left repeat-x;
+    height: 2em;
+    line-height: 2em;
+    float: left;
+    width: 9em;
+    display: block;
+    border: 0.0em solid #dcdce9;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+} 
+
+#nav-menu li a:hover
+{
+    background-color: #EEEEEE;
+    color: #666699;
+}
+
+.titulo
+{
+    background-color: #666699;
+    color: white;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.67em;
+}
+
+#content img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#content p
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: justify;
+    font-size: 120%;
+}
+
+#rodape
+{
+    height: 120px;
+    display: block;
+	background-color: #666699;
+	width: 748px;
+	margin-top: -11px;
+	margin-left: auto;
+	margin-right: auto;
+    color: white;
+    padding: 15px;
+    font-size: 120%;
+}
+
+#rodape a
+{
+    color: white;
+}
