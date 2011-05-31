@@ -1,0 +1,22 @@
+<h2>Twitter</h2>
+
+<h3>Timeline</h3>
+
+<?php foreach($this->timeline as $valTimeline){?>
+<ul>
+    <li><img src="<?=$valTimeline->user->profile_image_url?>"></li>
+    <li><?=$valTimeline->user->name?></li>
+    <li><?=$valTimeline->text?></li>
+</ul>
+<?php }?>
+
+
+
+<h3>Followers</h3>
+
+<?php foreach($this->followers as $val){?>
+<ul>
+    <li><img src="<?=$val->profile_image_url?>"></li>
+    <li><?=$val->name?></li>
+</ul>
+<?php }?>

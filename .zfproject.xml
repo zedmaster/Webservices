@@ -50,6 +50,10 @@
         <controllerFile controllerName="Introducao">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Twitter">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="client"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Pesquisar"/>
@@ -118,6 +122,12 @@
           <viewControllerScriptsDirectory forControllerName="Introducao">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Twitter">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Twitter">
+            <viewScriptFile forActionName="client"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -163,6 +173,7 @@
           <testApplicationControllerFile filesystemName="ConsumerControllerTest.php"/>
           <testApplicationControllerFile filesystemName="OpenidControllerTest.php"/>
           <testApplicationControllerFile filesystemName="IntroducaoControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="TwitterControllerTest.php"/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>
