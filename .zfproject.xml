@@ -54,6 +54,10 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="client"/>
         </controllerFile>
+        <controllerFile controllerName="Ebayfinding">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="client"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Pesquisar"/>
@@ -128,6 +132,12 @@
           <viewControllerScriptsDirectory forControllerName="Twitter">
             <viewScriptFile forActionName="client"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Ebayfinding">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Ebayfinding">
+            <viewScriptFile forActionName="client"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -174,6 +184,7 @@
           <testApplicationControllerFile filesystemName="OpenidControllerTest.php"/>
           <testApplicationControllerFile filesystemName="IntroducaoControllerTest.php"/>
           <testApplicationControllerFile filesystemName="TwitterControllerTest.php"/>
+          <testApplicationControllerFile filesystemName="EbayfindingControllerTest.php"/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>

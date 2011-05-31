@@ -1,0 +1,10 @@
+<h2>Ebay Finding</h2>
+
+<?php foreach($this->resposta as $item){?>
+<ul>
+    <li><strong><?=$item->title?></strong></li>
+    <li><a href="<?=$item->viewItemURL?>"><?=$item->viewItemURL?></a></li>
+    <li><img src="<?=$item->galleryURL?>"></li>
+    <li><?=$item->sellingStatus->currentPrice?></li>
+</ul>
+<?php }?>
